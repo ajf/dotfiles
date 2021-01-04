@@ -1,0 +1,12 @@
+[submodule "lazy.nvim"]
+	path = .local/share/nvim/lazy/lazy.nvim
+	url = https://github.com/folke/lazy.nvim.git
+[submodule "tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "omf"]
+	path = .local/share/omf
+	url = https://github.com/oh-my-fish/oh-my-fish.git
+[submodule "alacritty-themes"]
+	path = .config/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme.git

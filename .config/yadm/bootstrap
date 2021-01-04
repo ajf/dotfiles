@@ -1,0 +1,56 @@
+#!/bin/sh
+# vim:ts=2:sw=2:expandtab
+system_type=$(uname -s)
+
+##
+## Do macOS stuff with Homebrew
+##
+if [ "$system_type" = "Darwin" ]; then
+  # install homebrew if it's missing
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+
+  if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating homebrew bundle"
+    brew bundle --global
+  fi
+fi
+
+##
+## Checking out git submodules
+##
+echo "init git submodules"
+yadm submodule update --recursive --init
+
+##
+## tmux stuff
+##
+TMUX_PLUGIN_DIRECTORY=~/.tmux/plugins/tpm
+${TMUX_PLUGIN_DIRECTORY}/bin/install_plugins
+
+##
+## Vim stuff
+##
+if command -v nvim >/dev/null 2>&1; then
+  echo "Bootstraping Neovim"
+  nvim --headless '+Lazy! sync' +qa
+  echo
+fi
+
+##
+## OMF
+##
+fish -c 'omf install'
+
+##
+## Alacritty terminfo
+##
+tic -xe alacritty,alacritty-direct ~/.config/alacritty/alacritty.info
+
+##
+## Rust stuff
+##
+rustup install stable
+rustup component add rust-analyzer

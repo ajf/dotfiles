@@ -1,0 +1,13 @@
+fish_add_path /opt/homebrew/bin
+
+if test -d (brew --prefix)"/share/fish/completions"
+    set -p fish_complete_path (brew --prefix)/share/fish/completions
+else
+    echo "No homebrew completions"
+end
+
+if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+    set -p fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+else
+    echo "No homebrew vendor completions"
+end

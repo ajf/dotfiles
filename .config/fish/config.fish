@@ -8,11 +8,28 @@ fish_add_path ~/bin ~/.cargo/bin
 
 if type -q zoxide
   zoxide init fish | source
+else
+  echo "WARNING: no zoxide installed"
 end
 
 if type -q rustup
   rustup completions fish | source
+else
+  echo "WARNING: no rustup installed"
 end
+
+if type -q direnv
+  direnv hook fish | source
+else
+  echo "WARNING: no direnv installed"
+end
+
+if type -q nvim
+  set -xg EDITOR nvim
+else
+  echo "WARNING: No Neovim installed"
+end
+
 
 set -g theme_display_date no
 set -g theme_display_hg no

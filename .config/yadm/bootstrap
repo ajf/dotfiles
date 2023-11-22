@@ -16,6 +16,9 @@ if [ "$system_type" = "Darwin" ]; then
     echo "Updating homebrew bundle"
     brew bundle --global
   fi
+
+  # Remap capslock to control
+  hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x7000000E0}]}'
 fi
 
 ##

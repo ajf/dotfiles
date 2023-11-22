@@ -2,7 +2,8 @@ set theme_color_scheme solarized-dark
 
 fish_vi_key_bindings
 
-fish_add_path ~/bin ~/.cargo/bin
+fish_add_path ~/bin
+fish_add_path ~/.cargo/bin
 
 # fish_ssh_agent
 

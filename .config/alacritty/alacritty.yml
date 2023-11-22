@@ -1,7 +1,6 @@
 font:
   normal:
-    family: CaskaydiaCove Nerd Font
-    style: Regular
+    family: JetBrainsMono Nerd Font
   size: 12
 
 import:

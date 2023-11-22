@@ -17,7 +17,16 @@ require("lazy").setup({
     'L3MON4D3/LuaSnip',
     'airblade/vim-gitgutter',
     'dag/vim-fish',
-    'folke/tokyonight.nvim',
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+        config = function()
+            require("tokyonight").setup({
+                style = "",
+                terminal_colors = true,
+            })
+        end
+    },
     {
         'cappyzawa/trim.nvim', opts = {
             trim_last_line = false,
@@ -129,35 +138,42 @@ require("lazy").setup({
             'nvim-lua/lsp-status.nvim',
         },
         config = function()
-            require('lualine').setup {
-                options = {
-                    theme = "nord"
-                },
-                sections = {
-                    lualine_a = { { 'filename', file_status = true, path = 1, shorting_target = 20 } },
-                    lualine_c = { "os.date('%A %H:%M')", 'data', "require'lsp-status'.status()" } }
-                }
-            end
-        },
-        'mracos/mermaid.vim',
-        'neovim/nvim-lspconfig',
-        'nvim-lua/lsp_extensions.nvim',
-        'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope.nvim',
-        'onsails/lspkind-nvim',
-        'rafamadriz/friendly-snippets',
-        'shaunsingh/nord.nvim',
-        'simrat39/rust-tools.nvim',
-        'towolf/vim-helm',
-        'tpope/vim-fugitive',
-        'tpope/vim-markdown',
-        'tpope/vim-surround',
-        'windwp/nvim-autopairs',
+            require('lualine').setup({
+		    options = {
+			    theme = "tokyonight"
+		    },
+		    sections = {
+			    lualine_a = { { 'filename', file_status = true, path = 1, shorting_target = 20 } },
+			    lualine_c = { "os.date('%A %H:%M')", 'data', "require'lsp-status'.status()" }
+		    }
+	    })
+        end
     },
+    'mracos/mermaid.vim',
+    'neovim/nvim-lspconfig',
+    'nvim-lua/lsp_extensions.nvim',
+    {
+	    'stevearc/aerial.nvim',
+	    dependencies = {
+		    "nvim-treesitter/nvim-treesitter",
+		    "nvim-tree/nvim-web-devicons"
+	    },
+    },
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope.nvim',
+    'onsails/lspkind-nvim',
+    'rafamadriz/friendly-snippets',
+    'Ciel-MC/rust-tools.nvim',
+    'towolf/vim-helm',
+    'shaunsingh/nord.nvim',
+    'tpope/vim-fugitive',
+    'tpope/vim-markdown',
+    'tpope/vim-surround',
+    'mbbill/undotree',                -- display undotree for file, configured to <leader>u
+    --'windwp/nvim-autopairs',        -- Not a clue how this works, needs research
     {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-
         config = function()
             require("nvim-treesitter.configs").setup({
                 ensure_installed = { "lua", "rust", "toml", "fish", "markdown", "sql", "yaml" },
@@ -175,5 +191,4 @@ require("lazy").setup({
             })
         end
     },
-    'gorodinskiy/vim-coloresque'
-)
+})

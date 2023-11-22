@@ -1,15 +1,20 @@
 vim.g.mapleader = ","
 
-vim.g.nord_italic = false
-require('nord').set()
+-- vim.g.nord_italic = false
+-- require('nord').set()
+
+vim.cmd[[colorscheme tokyonight-night]]
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.foldenable = false
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+vim.opt.undofile = true
 
 vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope find_files<CR>", { expr = false, noremap = true })
-
 
 vim.cmd([[
 autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' |   exe "normal! g`\"" | endif
@@ -28,6 +33,29 @@ vim.cmd([[
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
+
+require("aerial").setup({
+    -- optionally use on_attach to set keymaps when aerial has attached to a buffer
+    on_attach = function(bufnr)
+        -- Jump forwards/backwards with '{' and '}'
+        vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+        vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+    end,
+})
+
+vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
+
+require 'lspconfig'.rust_analyzer.setup({
+    settings = {
+        ['rust-analyzer'] = {
+            diagnostics = {
+                enable = true;
+            }
+        }
+    }
+})
+
 
 -- LSP Diagnostics Options Setup
 local sign = function(opts)

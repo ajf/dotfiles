@@ -19,6 +19,11 @@ require("lazy").setup({
     'dag/vim-fish',
     'folke/tokyonight.nvim',
     {
+        'cappyzawa/trim.nvim', opts = {
+            trim_last_line = false,
+        }
+    },
+    {
         'hrsh7th/nvim-cmp',
         dependencies = {
             'hrsh7th/cmp-buffer',
@@ -107,7 +112,7 @@ require("lazy").setup({
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
-        dependencies = { 
+        dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
@@ -128,7 +133,7 @@ require("lazy").setup({
                 options = {
                     theme = "nord"
                 },
-                sections = { 
+                sections = {
                     lualine_a = { { 'filename', file_status = true, path = 1, shorting_target = 20 } },
                     lualine_c = { "os.date('%A %H:%M')", 'data', "require'lsp-status'.status()" } }
                 }

@@ -1,7 +1,7 @@
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-  size: 12
-
+    family: Inconsolata LGC Nerd Font
+    style:
+  size: 10
 import:
   - ~/.config/alacritty/themes/themes/cityLights.yaml

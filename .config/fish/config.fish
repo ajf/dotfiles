@@ -31,6 +31,7 @@ else
   echo "WARNING: No Neovim installed"
 end
 
+set -x T_SESSION_USE_GIT_ROOT true
 
 set -g theme_display_date no
 set -g theme_display_hg no

@@ -21,6 +21,8 @@ brew "mermaid-cli"
 brew "taskwarrior-tui"
 brew "zoxide"
 brew "kubectx"
+brew "lft"
+brew "lazygit"
 
 tap "homebrew/cask-fonts"
 

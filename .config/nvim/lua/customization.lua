@@ -46,17 +46,6 @@ require("aerial").setup({
 vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
 
-require 'lspconfig'.rust_analyzer.setup({
-    settings = {
-        ['rust-analyzer'] = {
-            diagnostics = {
-                enable = true;
-            }
-        }
-    }
-})
-
-
 -- LSP Diagnostics Options Setup
 local sign = function(opts)
   vim.fn.sign_define(opts.name, {

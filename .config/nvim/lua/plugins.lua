@@ -150,7 +150,6 @@ require("lazy").setup({
         end
     },
     'mracos/mermaid.vim',
-    'neovim/nvim-lspconfig',
     'nvim-lua/lsp_extensions.nvim',
     {
 	    'stevearc/aerial.nvim',
@@ -163,8 +162,11 @@ require("lazy").setup({
     'nvim-telescope/telescope.nvim',
     'onsails/lspkind-nvim',
     'rafamadriz/friendly-snippets',
-    'Ciel-MC/rust-tools.nvim',
-    'towolf/vim-helm',
+    {
+	    'mrcjkb/rustaceanvim',
+	    version = '^3',
+	    ft = { 'rust' },
+    },
     'shaunsingh/nord.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-markdown',

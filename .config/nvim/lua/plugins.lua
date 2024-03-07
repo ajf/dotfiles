@@ -14,7 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ","
 
 require("lazy").setup({
-    'L3MON4D3/LuaSnip',
+    {
+        'L3MON4D3/LuaSnip',
+        version = "v2.*",
+    },
     'airblade/vim-gitgutter',
     'dag/vim-fish',
     {
@@ -172,7 +175,6 @@ require("lazy").setup({
     'tpope/vim-markdown',
     'tpope/vim-surround',
     'mbbill/undotree',                -- display undotree for file, configured to <leader>u
-    --'windwp/nvim-autopairs',        -- Not a clue how this works, needs research
     {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',

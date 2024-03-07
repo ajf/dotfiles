@@ -1,6 +1,12 @@
 [kubernetes]
 disabled = false
 
+[direnv]
+disabled = false
+
+[git_metrics]
+disabled = false
+
 [character]
 success_symbol = "👉"
 vicmd_symbol = "✌️"

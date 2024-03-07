@@ -181,6 +181,7 @@ require("lazy").setup({
         ft = { 'toml' },
     },
     "nvimtools/none-ls.nvim",
+    "f-person/git-blame.nvim",
     'shaunsingh/nord.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-markdown',

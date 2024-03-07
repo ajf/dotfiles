@@ -23,6 +23,8 @@ brew "zoxide"
 brew "kubectx"
 brew "lft"
 brew "lazygit"
+brew "bat"
+brew "lsd"
 
 tap "homebrew/cask-fonts"
 

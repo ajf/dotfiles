@@ -44,7 +44,8 @@ require("lazy").setup({
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-path',
             'saadparwaiz1/cmp_luasnip',
-            'rafamadriz/friendly-snippets'
+            'rafamadriz/friendly-snippets',
+            'saecki/crates.nvim',
         },
         config = function()
             require("cmp_nvim_lsp").setup()
@@ -115,7 +116,8 @@ require("lazy").setup({
                 },
                 sources = cmp.config.sources({
                     {name = "nvim_lsp"},
-                    {name = "luasnip"}
+                    {name = "luasnip"},
+                    {name = "crates"}
                 }, { { name = "buffer" } })
             }
         end
@@ -167,9 +169,18 @@ require("lazy").setup({
     'rafamadriz/friendly-snippets',
     {
 	    'mrcjkb/rustaceanvim',
-	    version = '^3',
+	    version = '^4',
 	    ft = { 'rust' },
     },
+    {
+        'saecki/crates.nvim',
+        tag = 'stable',
+        config = function()
+            require('crates').setup()
+        end,
+        ft = { 'toml' },
+    },
+    "nvimtools/none-ls.nvim",
     'shaunsingh/nord.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-markdown',

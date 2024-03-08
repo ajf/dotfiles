@@ -16,6 +16,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
---require("lsp")
---require("completion")
+require("lsp")
 require("customization")

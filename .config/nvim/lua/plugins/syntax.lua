@@ -1,5 +1,10 @@
 return {
     {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        lazy = false,
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         dependencies = {
             "hiphish/rainbow-delimiters.nvim",
@@ -8,7 +13,7 @@ return {
         run = ':TSUpdate',
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = { "lua", "rust", "toml", "fish", "markdown", "sql", "yaml", "latex", "markdown", "fish", "mermaid", "pem", "dockerfile", "diff", "csv", "ssh_config", "tmux", "vim", "terraform", "proto", "passwd", "git_config", "bash" },
+                ensure_installed = { "lua", "rust", "toml", "fish", "markdown", "sql", "yaml", "latex", "markdown", "fish", "mermaid", "pem", "dockerfile", "diff", "csv", "ssh_config", "tmux", "vim", "terraform", "proto", "passwd", "git_config", "bash", "comment" },
                 auto_install = true,
                 highlight = {
                     enable = true,

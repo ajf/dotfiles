@@ -1,4 +1,4 @@
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme tokyonight]]
 
 vim.opt.number = true
 vim.opt.relativenumber = true

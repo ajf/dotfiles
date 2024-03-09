@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-normal = { family = "Inconsolata LGC Nerd Font", style = "Regular" }
+normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
 
 [keyboard]
 bindings = [

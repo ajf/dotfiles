@@ -1,5 +1,13 @@
 return {
-    'shaunsingh/nord.nvim',
+    {
+        'shaunsingh/nord.nvim',
+        config = function()
+            vim.g.nord_contrast = true
+            vim.g.nord_italic = true
+            vim.g.nord_bold = true
+            vim.g.nord_borders = true
+        end
+    },
     {
         'nvim-telescope/telescope.nvim',
         dependencies = {

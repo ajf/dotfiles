@@ -37,6 +37,12 @@ else
   echo "WARNING: No starship installed"
 end
 
+if type -q fzf
+  fzf --fish | source
+else
+  echo "WARNING: No fzf installed"
+end
+
 set -x T_SESSION_USE_GIT_ROOT true
 
 set -g theme_display_date no

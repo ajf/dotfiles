@@ -2,8 +2,28 @@ import = [
   "~/.config/alacritty/themes/themes/nord.toml"
 ]
 
-[font]
-normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
+[font.bold]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Regular"
+
+[window]
+opacity = 0.9
+
+[window.padding]
+x = 5
+y = 5
 
 [keyboard]
 bindings = [

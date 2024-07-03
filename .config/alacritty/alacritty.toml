@@ -24,21 +24,3 @@ opacity = 0.9
 [window.padding]
 x = 5
 y = 5
-
-[keyboard]
-bindings = [
-  { key = "T",        mods = "Command",       chars = "\u0002\u0063" }, # create a new tmux window
-  { key = "LBracket", mods = "Command",       chars = "\u0002\u0070" }, # switch to next tmux window
-  { key = "RBracket", mods = "Command",       chars = "\u0002\u006e" }, # switch to previous tmux window
-  { key = "W",        mods = "Command",       chars = "\u0002\u0026" }, # Kill the current window
-  { key = "Key1",     mods = "Command",       chars = "\u0002\u0030" }, # select tmux window 1
-  { key = "Key2",     mods = "Command",       chars = "\u0002\u0031" }, #                ... 2
-  { key = "Key3",     mods = "Command",       chars = "\u0002\u0032" }, #                ... 3
-  { key = "Key4",     mods = "Command",       chars = "\u0002\u0033" }, #                ... 4
-  { key = "Key5",     mods = "Command",       chars = "\u0002\u0034" }, #                ... 5
-  { key = "Key6",     mods = "Command",       chars = "\u0002\u0035" }, #                ... 6
-  { key = "Key7",     mods = "Command",       chars = "\u0002\u0036" }, #                ... 7
-  { key = "Key8",     mods = "Command",       chars = "\u0002\u0037" }, #                ... 8
-  { key = "Key9",     mods = "Command",       chars = "\u0002\u0038" }, #
-  { key = "Key0",     mods = "Command",       chars = "\u0002\u0039" }, # select tmux window 1
-]

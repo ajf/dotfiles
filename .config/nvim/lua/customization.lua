@@ -11,6 +11,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 500
 vim.wo.foldmethod = 'expr'
 vim.opt.signcolumn = 'yes'
+vim.opt.clipboard = 'unnamedplus'
 
 vim.cmd([[
 autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' |   exe "normal! g`\"" | endif

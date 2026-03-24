@@ -5,12 +5,12 @@ These are my dotfiles, they are based on [yadm](https://yadm.io).  I work on Dar
 
 I use:
 
-* Alacritty terminal
-* Neovim 0.9x w/Lazy.nvim
+* Ghostty or Foot terminal
+* Neovim 0.11.x w/Lazy.nvim
 * Tmux
 * Homebrew (darwin)
 * Fish (w/oh-my-fish)
-* i3 when I have a WM
+* Hyprland with DankMaterialShell
 * TaskWarrior
 
 Using these:

@@ -45,6 +45,7 @@ else
 end
 
 set -x T_SESSION_USE_GIT_ROOT true
+set -x LIBPROC_HIDE_KERNEL 1
 
 set -g theme_display_date no
 set -g theme_display_hg no

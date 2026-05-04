@@ -18,8 +18,8 @@ set -gx FZF_DEFAULT_OPTS "
 
 # Use fd for faster file finding if available
 if command -q fd
-    set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
-    set -gx FZF_ALT_C_COMMAND   'fd --type d --hidden --follow --exclude .git'
+    set -gx FZF_DEFAULT_COMMAND '/usr/bin/fd --type f --hidden --follow --exclude .git'
+    set -gx FZF_ALT_C_COMMAND   '/usr/bin/fd --type d --hidden --follow --exclude .git'
     set -gx FZF_CTRL_T_COMMAND  "$FZF_DEFAULT_COMMAND"
 end
 
@@ -47,7 +47,7 @@ function fd --description 'Fuzzy-find a directory and cd into it'
     if command -q fdfind
         set cmd 'fdfind --type d --hidden --follow --exclude .git'
     else if command -q fd
-        set cmd 'fd --type d --hidden --follow --exclude .git'
+        set cmd '/usr/bin/fd --type d --hidden --follow --exclude .git'
     else
         set cmd 'find . -type d -not -path "*/.git/*"'
     end

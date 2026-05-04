@@ -55,7 +55,6 @@ vim.pack.add({
     'https://github.com/obsidian-nvim/obsidian.nvim',
 })
 
-require("plugins.dankcolors")
 require("plugins.util")
 require("plugins.lsp")
 require("plugins.completion")

@@ -1,7 +1,7 @@
 [user]
 	name = Andrew Forgue
 	email = andrew@forgue.io
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO9mWl3pPCPvpbbLZoseNee32Cst2FbV22zJqARVTydn
+	signingkey = "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO9mWl3pPCPvpbbLZoseNee32Cst2FbV22zJqARVTydn"
 
 [includeIf "gitdir:~/work/"]
 	path = work/gitconfig
@@ -16,7 +16,10 @@
 	format = ssh
 
 [gpg "ssh"]
-	program = "op-ssh-sign"
+	program = "~/bin/op-ssh-sign"
 
 [commit]
-  gpgsign = true
+    gpgsign = true
+
+[log]
+    showSignature = true

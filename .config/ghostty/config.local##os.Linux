@@ -1,0 +1,4 @@
+# vim:ft=ghostty
+
+# No window decorations on linux (dank)
+window-decoration = false

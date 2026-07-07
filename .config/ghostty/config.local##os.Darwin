@@ -1,0 +1,8 @@
+# vim:ft=ghostty
+
+quick-terminal-position = top
+quick-terminal-size = 30%,60%
+
+keybind = global:ctrl+backquote=toggle_quick_terminal
+
+background-blur = macos-glass-clear
